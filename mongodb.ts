@@ -1,7 +1,11 @@
 import { MongoClient } from "https://deno.land/x/mongo@v0.12.1/mod.ts";
+import "https://deno.land/x/dotenv/load.ts";
 
+
+const mongoKey: any = Deno.env.get('MONGOOSE_KEY')
 const client = new MongoClient();
-client.connectWithUri("mongodb+srv://adffewr:zcvdsf1258!@boiler-plate-awr6o.mongodb.net/test?retryWrites=true&w=majority");
+
+client.connectWithUri(mongoKey);
 
 
 interface ProductSchema {

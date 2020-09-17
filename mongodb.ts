@@ -9,7 +9,6 @@ client.connectWithUri(mongoKey);
 
 
 interface ProductSchema {
-    _id: { $oid: string };
     title: string;
     price: number;
 }
